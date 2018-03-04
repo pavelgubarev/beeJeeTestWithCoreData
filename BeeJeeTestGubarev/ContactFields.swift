@@ -43,7 +43,20 @@ extension Contact {
         newField = Field("Zip")
         newField.value = address.zipCode ?? ""
         fields.append(newField)
+
+        newField = Field("City")
+        newField.value = address.city ?? ""
+        fields.append(newField)
+
+        newField = Field("Address")
+        newField.value = address.streetAddress1 ?? ""
         
+        if let address2 = address.streetAddress2 {
+            newField.value += ("\n" + address2)
+        }
+        
+        fields.append(newField)
+
         return fields
         
     }

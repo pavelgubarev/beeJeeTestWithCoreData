@@ -28,9 +28,14 @@ class OneContactTableViewController: UITableViewController, OneContactViewProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
         assembler.registerOneContactView(withView: self)
 
         presenter.showOneContact()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -83,7 +83,7 @@ class MainListTableViewController: UITableViewController, MainListViewProtocol {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "viewContact")
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.show(controller, sender: nil)
         
     }
 
