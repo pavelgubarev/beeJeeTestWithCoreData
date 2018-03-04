@@ -1,5 +1,5 @@
 //
-//  MainListPresenterProtocol.swift
+//  EditTableViewProtocol.swift
 //  BeeJeeTestGubarev
 //
 //  Created by Павел Губарев on 04/03/2018.
@@ -8,12 +8,11 @@
 
 import Foundation
 
-public protocol MainListPresenterProtocol {
+protocol EditTableViewProtocol : class {
     
-    func mainListDidAppear()
+    func fillFields(withContact : Contact)
     
-    func showAddContactForm()
+    func goBack()
     
-    func showOne(contact : Int)
     
 }

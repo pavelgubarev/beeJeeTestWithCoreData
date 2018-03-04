@@ -8,8 +8,12 @@
 
 import Foundation
 
-protocol OneContactViewProtocol {
+protocol OneContactViewProtocol : class {
     
     func showOne(contact : Contact)
+    
+    func editButtonPressed()
+    
+    func gotoEditingCurrentContact()
 
 }

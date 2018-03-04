@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol MainListViewProtocol {
+public protocol MainListViewProtocol : class {
     
     func showCurrentMainList(withContacts : [Contact])
     

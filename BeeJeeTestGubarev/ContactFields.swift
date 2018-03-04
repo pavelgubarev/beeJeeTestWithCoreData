@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Field {
+class Field {
     var name : String = ""
     var value : String = ""
     

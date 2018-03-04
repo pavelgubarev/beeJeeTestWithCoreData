@@ -22,5 +22,10 @@ class AssemblerMVP {
         view.presenter = OneContactPresenter(withView: view, withModel: model)
         
     }
-    
+
+    func registerEditContactView(withView view: EditTableViewController) {
+        view.presenter = EditPresenter(withView: view, withModel: model)
+        
+    }
+
 }

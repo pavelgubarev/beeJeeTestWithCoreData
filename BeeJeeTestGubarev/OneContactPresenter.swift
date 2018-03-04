@@ -10,8 +10,8 @@ import Foundation
 
 class OneContactPresenter : OneContactPresenterProtocol {
     
-    private let view: OneContactViewProtocol
-    private let model: Model
+    unowned private let view: OneContactViewProtocol
+    unowned private let model: Model
     
     public init(withView: OneContactViewProtocol, withModel: Model) {
         self.view = withView
@@ -19,8 +19,13 @@ class OneContactPresenter : OneContactPresenterProtocol {
     }
 
     
-    func showOneContact() {
+    func oneContactViewDidAppear() {
         view.showOne(contact : model.contacts[model.currentContact])
+    }
+    
+    func editCurrentContact() {
+        model.editFormMode = .edit
+        view.gotoEditingCurrentContact()
     }
     
 }

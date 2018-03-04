@@ -1,5 +1,5 @@
 //
-//  MainListPresenterProtocol.swift
+//  EditPresenterProtocol.swift
 //  BeeJeeTestGubarev
 //
 //  Created by Павел Губарев on 04/03/2018.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol MainListPresenterProtocol {
+public protocol EditPresenterProtocol {
     
-    func mainListDidAppear()
+    func editorDidAppear()
     
-    func showAddContactForm()
+    func save( _ contact: Contact)
     
-    func showOne(contact : Int)
+    func cancel()
     
 }

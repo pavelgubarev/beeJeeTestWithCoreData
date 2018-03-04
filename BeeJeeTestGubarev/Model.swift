@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum EditFormMode {
+    case add
+    case edit
+}
+
 
 class Model {
     
@@ -16,6 +21,32 @@ class Model {
     public var contacts = [Contact]()
     
     public var currentContact : Int = 0
+    
+    public var newContact : Contact?
+    
+    public var editFormMode : EditFormMode = .add
+    
+    func createNewContact() {
+        
+        var ids = [Int]()
+        
+        for contact in contacts {
+            ids.append(contact.id)
+        }
+        
+        let nextID = ids.max()!
+        
+        newContact = Contact.makeNew(withId : nextID)
+        
+    }
+    
+    func appendNewContact() {
+        contacts.append(newContact!)
+    }
+    
+    func dropNewContact() {
+        newContact = nil
+    }
     
     func loadInitialJSON() {
         

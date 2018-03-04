@@ -11,8 +11,8 @@ import Foundation
 final class MainListPresenter : MainListPresenterProtocol {
   
   
-    private let view: MainListViewProtocol
-    private let model: Model
+    unowned private let view: MainListViewProtocol
+    unowned private let model: Model
     
     public init(withView: MainListViewProtocol, withModel: Model) {
         self.view = withView
@@ -20,11 +20,12 @@ final class MainListPresenter : MainListPresenterProtocol {
     }
 
     
-    func showCurrentMainList() {
+    func mainListDidAppear() {
         view.showCurrentMainList(withContacts : model.contacts)
     }
     
     func showAddContactForm() {
+        model.editFormMode = .add
         view.gotoAddContact() 
     }
     

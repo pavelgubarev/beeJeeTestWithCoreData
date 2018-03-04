@@ -28,6 +28,19 @@ public struct Contact {
 }
 
 extension Contact {
+    static func makeNew(withId: Int) -> Contact {
+        
+        let address = Adress(streetAddress1: "", streetAddress2: "", city: "", zipCode: "")
+        
+        let name = Name(firstName: "", lastName: "")
+        
+        return Contact(id: withId, name: name, phoneNumber: nil, address: address)
+    }
+}
+
+
+
+extension Contact {
     init?(json: [String: Any]) {
         
 

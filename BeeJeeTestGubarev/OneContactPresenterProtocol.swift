@@ -10,7 +10,7 @@ import Foundation
 
 public protocol OneContactPresenterProtocol {
     
-    func showOneContact()
+    func oneContactViewDidAppear()
     
-    
+    func editCurrentContact()
 }
