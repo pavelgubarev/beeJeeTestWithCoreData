@@ -13,6 +13,22 @@
 		50E9B10B204BF34D003CB23C /* BeeJeeTestGubarev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B109204BF34D003CB23C /* BeeJeeTestGubarev.xcdatamodeld */; };
 		50E9B10D204BF34D003CB23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B10C204BF34D003CB23C /* Assets.xcassets */; };
 		50E9B110204BF34E003CB23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B10E204BF34E003CB23C /* LaunchScreen.storyboard */; };
+		50E9B118204BF421003CB23C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B117204BF421003CB23C /* Model.swift */; };
+		50E9B11A204BF42D003CB23C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B119204BF42D003CB23C /* Contact.swift */; };
+		50E9B11D204BF885003CB23C /* initialContacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B11C204BF885003CB23C /* initialContacts.json */; };
+		50E9B11F204BF8C5003CB23C /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B11E204BF8C5003CB23C /* MainListTableViewController.swift */; };
+		50E9B121204BF959003CB23C /* MainListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B120204BF959003CB23C /* MainListViewProtocol.swift */; };
+		50E9B123204BF9AA003CB23C /* MainListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B122204BF9AA003CB23C /* MainListPresenterProtocol.swift */; };
+		50E9B125204BF9C0003CB23C /* MainListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B124204BF9C0003CB23C /* MainListPresenter.swift */; };
+		50E9B128204BFE05003CB23C /* MainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B127204BFE05003CB23C /* MainListTableViewCell.swift */; };
+		50E9B12A204C0463003CB23C /* AssemblerMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B129204C0463003CB23C /* AssemblerMVP.swift */; };
+		50E9B12E204C0E7C003CB23C /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B12D204C0E7C003CB23C /* EditTableViewController.swift */; };
+		50E9B130204C133D003CB23C /* OneContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B12F204C133D003CB23C /* OneContactTableViewController.swift */; };
+		50E9B133204C1477003CB23C /* OneContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B132204C1477003CB23C /* OneContactTableViewCell.swift */; };
+		50E9B135204C1621003CB23C /* OneContactPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B134204C1621003CB23C /* OneContactPresenterProtocol.swift */; };
+		50E9B137204C163D003CB23C /* OneContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B136204C163D003CB23C /* OneContactPresenter.swift */; };
+		50E9B139204C16A8003CB23C /* OneContactViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B138204C16A8003CB23C /* OneContactViewProtocol.swift */; };
+		50E9B13B204C2083003CB23C /* ContactFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B13A204C2083003CB23C /* ContactFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,22 @@
 		50E9B10C204BF34D003CB23C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50E9B10F204BF34E003CB23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50E9B111204BF34E003CB23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50E9B117204BF421003CB23C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		50E9B119204BF42D003CB23C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		50E9B11C204BF885003CB23C /* initialContacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = initialContacts.json; sourceTree = "<group>"; };
+		50E9B11E204BF8C5003CB23C /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
+		50E9B120204BF959003CB23C /* MainListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewProtocol.swift; sourceTree = "<group>"; };
+		50E9B122204BF9AA003CB23C /* MainListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListPresenterProtocol.swift; sourceTree = "<group>"; };
+		50E9B124204BF9C0003CB23C /* MainListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListPresenter.swift; sourceTree = "<group>"; };
+		50E9B127204BFE05003CB23C /* MainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewCell.swift; sourceTree = "<group>"; };
+		50E9B129204C0463003CB23C /* AssemblerMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerMVP.swift; sourceTree = "<group>"; };
+		50E9B12D204C0E7C003CB23C /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		50E9B12F204C133D003CB23C /* OneContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactTableViewController.swift; sourceTree = "<group>"; };
+		50E9B132204C1477003CB23C /* OneContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactTableViewCell.swift; sourceTree = "<group>"; };
+		50E9B134204C1621003CB23C /* OneContactPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactPresenterProtocol.swift; sourceTree = "<group>"; };
+		50E9B136204C163D003CB23C /* OneContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactPresenter.swift; sourceTree = "<group>"; };
+		50E9B138204C16A8003CB23C /* OneContactViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactViewProtocol.swift; sourceTree = "<group>"; };
+		50E9B13A204C2083003CB23C /* ContactFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +90,53 @@
 			children = (
 				50E9B102204BF34D003CB23C /* AppDelegate.swift */,
 				50E9B104204BF34D003CB23C /* ViewController.swift */,
-				50E9B106204BF34D003CB23C /* Main.storyboard */,
-				50E9B10C204BF34D003CB23C /* Assets.xcassets */,
-				50E9B10E204BF34E003CB23C /* LaunchScreen.storyboard */,
-				50E9B111204BF34E003CB23C /* Info.plist */,
+				50E9B117204BF421003CB23C /* Model.swift */,
+				50E9B119204BF42D003CB23C /* Contact.swift */,
+				50E9B129204C0463003CB23C /* AssemblerMVP.swift */,
+				50E9B12D204C0E7C003CB23C /* EditTableViewController.swift */,
+				50E9B131204C1343003CB23C /* ViewOneContact */,
+				50E9B126204BFA0C003CB23C /* MainList */,
+				50E9B11B204BF5D0003CB23C /* Resources */,
 				50E9B109204BF34D003CB23C /* BeeJeeTestGubarev.xcdatamodeld */,
+				50E9B106204BF34D003CB23C /* Main.storyboard */,
+				50E9B111204BF34E003CB23C /* Info.plist */,
 			);
 			path = BeeJeeTestGubarev;
+			sourceTree = "<group>";
+		};
+		50E9B11B204BF5D0003CB23C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50E9B10E204BF34E003CB23C /* LaunchScreen.storyboard */,
+				50E9B11C204BF885003CB23C /* initialContacts.json */,
+				50E9B10C204BF34D003CB23C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50E9B126204BFA0C003CB23C /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				50E9B124204BF9C0003CB23C /* MainListPresenter.swift */,
+				50E9B122204BF9AA003CB23C /* MainListPresenterProtocol.swift */,
+				50E9B120204BF959003CB23C /* MainListViewProtocol.swift */,
+				50E9B11E204BF8C5003CB23C /* MainListTableViewController.swift */,
+				50E9B127204BFE05003CB23C /* MainListTableViewCell.swift */,
+			);
+			name = MainList;
+			sourceTree = "<group>";
+		};
+		50E9B131204C1343003CB23C /* ViewOneContact */ = {
+			isa = PBXGroup;
+			children = (
+				50E9B12F204C133D003CB23C /* OneContactTableViewController.swift */,
+				50E9B138204C16A8003CB23C /* OneContactViewProtocol.swift */,
+				50E9B132204C1477003CB23C /* OneContactTableViewCell.swift */,
+				50E9B13A204C2083003CB23C /* ContactFields.swift */,
+				50E9B134204C1621003CB23C /* OneContactPresenterProtocol.swift */,
+				50E9B136204C163D003CB23C /* OneContactPresenter.swift */,
+			);
+			name = ViewOneContact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E9B110204BF34E003CB23C /* LaunchScreen.storyboard in Resources */,
+				50E9B11D204BF885003CB23C /* initialContacts.json in Resources */,
 				50E9B10D204BF34D003CB23C /* Assets.xcassets in Resources */,
 				50E9B108204BF34D003CB23C /* Main.storyboard in Resources */,
 			);
@@ -139,9 +212,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E9B12E204C0E7C003CB23C /* EditTableViewController.swift in Sources */,
+				50E9B139204C16A8003CB23C /* OneContactViewProtocol.swift in Sources */,
+				50E9B12A204C0463003CB23C /* AssemblerMVP.swift in Sources */,
+				50E9B11F204BF8C5003CB23C /* MainListTableViewController.swift in Sources */,
+				50E9B125204BF9C0003CB23C /* MainListPresenter.swift in Sources */,
 				50E9B105204BF34D003CB23C /* ViewController.swift in Sources */,
 				50E9B10B204BF34D003CB23C /* BeeJeeTestGubarev.xcdatamodeld in Sources */,
+				50E9B13B204C2083003CB23C /* ContactFields.swift in Sources */,
+				50E9B128204BFE05003CB23C /* MainListTableViewCell.swift in Sources */,
+				50E9B11A204BF42D003CB23C /* Contact.swift in Sources */,
 				50E9B103204BF34D003CB23C /* AppDelegate.swift in Sources */,
+				50E9B137204C163D003CB23C /* OneContactPresenter.swift in Sources */,
+				50E9B130204C133D003CB23C /* OneContactTableViewController.swift in Sources */,
+				50E9B123204BF9AA003CB23C /* MainListPresenterProtocol.swift in Sources */,
+				50E9B118204BF421003CB23C /* Model.swift in Sources */,
+				50E9B135204C1621003CB23C /* OneContactPresenterProtocol.swift in Sources */,
+				50E9B121204BF959003CB23C /* MainListViewProtocol.swift in Sources */,
+				50E9B133204C1477003CB23C /* OneContactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,24 @@
+
+[
+ {
+ "ID": 1,
+ "firstName": "John",
+ "lastName": "Lennon",
+ "phoneNumber": "23943330",
+ "zipCode": " PO15 6PR",
+ "city": "FAREHAM",
+ "streetAddress1": "123 Gudge Heath Lane",
+ "streetAddress2": "Hampshire"
+ },
+ 
+ {
+ "ID": 2,
+ "firstName": "Paul",
+ "lastName": "McCartney",
+ "phoneNumber": "",
+ "zipCode": "GA 31522",
+ "city": "SAINT SIMONS ISLAND",
+ "streetAddress1": "207 Martin Street, 207 Martin Street, 207 Martin Street",
+ "streetAddress2": ""
+ }
+ ]
