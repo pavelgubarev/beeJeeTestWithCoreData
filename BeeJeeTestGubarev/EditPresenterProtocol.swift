@@ -14,6 +14,8 @@ public protocol EditPresenterProtocol {
     
     func save( _ contact: Contact)
     
+    func delete()
+    
     func cancel()
     
 }

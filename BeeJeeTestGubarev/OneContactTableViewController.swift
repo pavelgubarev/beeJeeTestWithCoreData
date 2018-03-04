@@ -49,7 +49,6 @@ class OneContactTableViewController: UITableViewController, OneContactViewProtoc
         
         self.navigationItem.rightBarButtonItem?.isEnabled = true
         
-        print(self.navigationItem.rightBarButtonItem?.isEnabled)
 
     }
 

@@ -49,6 +49,9 @@ class EditPresenter : EditPresenterProtocol {
         view.goBack()
     }
     
-    
+    func delete() {
+        model.contacts.remove(at: model.currentContact)
+        view.goToMainList()
+    }
     
 }

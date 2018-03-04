@@ -20,6 +20,9 @@ public struct Adress {
     var zipCode : String?
 }
 
+// Возможно, лучше было бы хранить контакт в словаре, а не структуре.
+// Но у этого решения есть свои плюсы
+
 public struct Contact {
     var id : Int
     var name : Name

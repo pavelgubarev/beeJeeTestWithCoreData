@@ -50,6 +50,10 @@ class EditTableViewController: UITableViewController, EditTableViewProtocol {
         self.navigationController?.popViewController(animated: false)
     }
     
+    func goToMainList() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,24 +80,38 @@ class EditTableViewController: UITableViewController, EditTableViewProtocol {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return fields.count
+        return fields.count + 1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EditContactTableViewCell", for: indexPath) as! EditContactTableViewCell
         
-        cell.fieldName.text = fields[indexPath.row].name
-        cell.fieldValue.text = fields[indexPath.row].value
-        
-        cell.owner = self
-        cell.rowNumber = indexPath.row
-        
-        return cell
+        if indexPath.row < fields.count {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EditContactTableViewCell", for: indexPath) as! EditContactTableViewCell
+            
+            cell.fieldName.text = fields[indexPath.row].name
+            cell.fieldValue.text = fields[indexPath.row].value
+            
+            cell.owner = self
+            cell.rowNumber = indexPath.row
+            
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DeleteCell", for: indexPath)
+            return cell
+        }
     }
     
     func updateField(number: Int, value: String ) {
         fields[number].value = value
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == fields.count {
+            presenter.delete()
+        }
     }
 
   

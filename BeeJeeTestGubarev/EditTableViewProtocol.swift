@@ -14,5 +14,6 @@ protocol EditTableViewProtocol : class {
     
     func goBack()
     
+    func goToMainList()
     
 }
