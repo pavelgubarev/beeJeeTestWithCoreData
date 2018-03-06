@@ -63,8 +63,8 @@ class MainListTableViewController: UITableViewController, MainListViewProtocol {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainListTableViewCell", for: indexPath) as! MainListTableViewCell
 
-        cell.firstNameLabel.text = contacts[indexPath.row].name.firstName
-        cell.lastNameLabel.text = contacts[indexPath.row].name.lastName
+        cell.firstNameLabel.text = contacts[indexPath.row].firstName
+        cell.lastNameLabel.text = contacts[indexPath.row].lastName
 
         return cell
     }

@@ -13,7 +13,6 @@
 		50E9B10D204BF34D003CB23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B10C204BF34D003CB23C /* Assets.xcassets */; };
 		50E9B110204BF34E003CB23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B10E204BF34E003CB23C /* LaunchScreen.storyboard */; };
 		50E9B118204BF421003CB23C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B117204BF421003CB23C /* Model.swift */; };
-		50E9B11A204BF42D003CB23C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B119204BF42D003CB23C /* Contact.swift */; };
 		50E9B11D204BF885003CB23C /* initialContacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B11C204BF885003CB23C /* initialContacts.json */; };
 		50E9B11F204BF8C5003CB23C /* MainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B11E204BF8C5003CB23C /* MainListTableViewController.swift */; };
 		50E9B121204BF959003CB23C /* MainListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B120204BF959003CB23C /* MainListViewProtocol.swift */; };
@@ -33,7 +32,6 @@
 		50E9B142204C30F8003CB23C /* EditTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B141204C30F8003CB23C /* EditTableViewProtocol.swift */; };
 		50E9B144204C3301003CB23C /* EditableContactFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B143204C3301003CB23C /* EditableContactFields.swift */; };
 		50E9B146204C37B9003CB23C /* EditContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B145204C37B9003CB23C /* EditContactTableViewCell.swift */; };
-		50E9B14B204C6A59003CB23C /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B14A204C6A59003CB23C /* CoreDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +43,6 @@
 		50E9B10F204BF34E003CB23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50E9B111204BF34E003CB23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E9B117204BF421003CB23C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		50E9B119204BF42D003CB23C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		50E9B11C204BF885003CB23C /* initialContacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = initialContacts.json; sourceTree = "<group>"; };
 		50E9B11E204BF8C5003CB23C /* MainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewController.swift; sourceTree = "<group>"; };
 		50E9B120204BF959003CB23C /* MainListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewProtocol.swift; sourceTree = "<group>"; };
@@ -65,7 +62,6 @@
 		50E9B141204C30F8003CB23C /* EditTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewProtocol.swift; sourceTree = "<group>"; };
 		50E9B143204C3301003CB23C /* EditableContactFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableContactFields.swift; sourceTree = "<group>"; };
 		50E9B145204C37B9003CB23C /* EditContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactTableViewCell.swift; sourceTree = "<group>"; };
-		50E9B14A204C6A59003CB23C /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				50E9B117204BF421003CB23C /* Model.swift */,
-				50E9B14A204C6A59003CB23C /* CoreDataModel.swift */,
-				50E9B119204BF42D003CB23C /* Contact.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,12 +245,10 @@
 				50E9B12A204C0463003CB23C /* AssemblerMVP.swift in Sources */,
 				50E9B11F204BF8C5003CB23C /* MainListTableViewController.swift in Sources */,
 				50E9B125204BF9C0003CB23C /* MainListPresenter.swift in Sources */,
-				50E9B14B204C6A59003CB23C /* CoreDataModel.swift in Sources */,
 				50E9B13D204C305D003CB23C /* EditPresenterProtocol.swift in Sources */,
 				50E9B10B204BF34D003CB23C /* BeeJeeTestGubarev.xcdatamodeld in Sources */,
 				50E9B13B204C2083003CB23C /* ContactFields.swift in Sources */,
 				50E9B128204BFE05003CB23C /* MainListTableViewCell.swift in Sources */,
-				50E9B11A204BF42D003CB23C /* Contact.swift in Sources */,
 				50E9B103204BF34D003CB23C /* AppDelegate.swift in Sources */,
 				50E9B137204C163D003CB23C /* OneContactPresenter.swift in Sources */,
 				50E9B130204C133D003CB23C /* OneContactTableViewController.swift in Sources */,

@@ -27,76 +27,72 @@ extension Contact {
         var EditableFields = [EditableField]()
         
         var newEditableField = EditableField("Name")
-        newEditableField.value = name.firstName
+        newEditableField.value = self.firstName!
         EditableFields.append(newEditableField)
 
         newEditableField = EditableField("Last Name")
-        newEditableField.value = name.lastName ?? ""
+        newEditableField.value = self.lastName ?? ""
         EditableFields.append(newEditableField)
 
         newEditableField = EditableField("Phone")
         
         
-        if let phone = phoneNumber {
-            newEditableField.value = String(phone)
-        } else {
-            newEditableField.value = ""
-        }
+            newEditableField.value = String(self.phoneNumber)
         EditableFields.append(newEditableField)
         
         newEditableField = EditableField("Zip")
-        newEditableField.value = address.zipCode ?? ""
+        newEditableField.value = zipCode ?? ""
         EditableFields.append(newEditableField)
 
         newEditableField = EditableField("City")
-        newEditableField.value = address.city ?? ""
+        newEditableField.value = city ?? ""
         EditableFields.append(newEditableField)
 
         newEditableField = EditableField("Address")
-        newEditableField.value = address.streetAddress1 ?? ""
+        newEditableField.value = streetAddress1 ?? ""
         EditableFields.append(newEditableField)
 
         newEditableField = EditableField("Address line 2")
-        newEditableField.value = address.streetAddress2 ?? ""
+        newEditableField.value = streetAddress2 ?? ""
         EditableFields.append(newEditableField)
 
         return EditableFields
         
     }
     
-    mutating func setContactFromFields(fields : [EditableField]) {
+    func setContactFromFields(fields : [EditableField]) {
         for field in fields {
             switch field.name {
                 
             case "Name":
-                self.name.firstName = field.value
+                self.firstName = field.value
                 break
 
             case "Last Name":
-                self.name.lastName = field.value
+                self.lastName = field.value
                 break
                 
             case "Phone":
                 
-                let phoneFromField = Int(field.value)
+                let phoneFromField = Int(field.value)!
                 
-                self.phoneNumber = phoneFromField == 0 ? nil : phoneFromField
+                self.phoneNumber = Int16(phoneFromField)
                 break
 
             case "Zip":
-                self.address.zipCode = field.value
+                self.zipCode = field.value
                 break
 
             case "City":
-                self.address.city = field.value
+                self.city = field.value
                 break
 
             case "Address":
-                self.address.streetAddress1 = field.value
+                self.streetAddress1 = field.value
                 break
 
             case "Address line 2":
-                self.address.streetAddress1 = field.value
+                self.streetAddress1 = field.value
                 break
 
                 default:

@@ -25,33 +25,29 @@ extension Contact {
         var fields = [Field]()
         
         var newField = Field("Name")
-        newField.value = name.firstName
+        newField.value = firstName!
         fields.append(newField)
 
         newField = Field("Last Name")
-        newField.value = name.lastName ?? ""
+        newField.value = lastName ?? ""
         fields.append(newField)
 
         newField = Field("Phone")
-        if let phone = phoneNumber {
-            newField.value = String(phone)
-        } else {
-            newField.value = ""
-        }
+            newField.value = String(phoneNumber)
         fields.append(newField)
         
         newField = Field("Zip")
-        newField.value = address.zipCode ?? ""
+        newField.value = zipCode ?? ""
         fields.append(newField)
 
         newField = Field("City")
-        newField.value = address.city ?? ""
+        newField.value = city ?? ""
         fields.append(newField)
 
         newField = Field("Address")
-        newField.value = address.streetAddress1 ?? ""
+        newField.value = streetAddress1 ?? ""
         
-        if let address2 = address.streetAddress2 {
+        if let address2 = streetAddress2 {
             newField.value += ("\n" + address2)
         }
         

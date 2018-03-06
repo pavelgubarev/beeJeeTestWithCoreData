@@ -39,6 +39,9 @@ class EditPresenter : EditPresenterProtocol {
         } else {
             model.contacts[model.currentContact] = contact
         }
+        
+        model.saveContacts()
+        
         view.goBack()
     }
     
@@ -50,7 +53,7 @@ class EditPresenter : EditPresenterProtocol {
     }
     
     func delete() {
-        model.contacts.remove(at: model.currentContact)
+        model.delete(model.contacts[model.currentContact])
         view.goToMainList()
     }
     

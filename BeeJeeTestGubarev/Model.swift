@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 enum EditFormMode {
     case add
@@ -26,18 +28,46 @@ class Model {
     
     public var editFormMode : EditFormMode = .add
     
+    var managedContext : NSManagedObjectContext!
+    
+    init() {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        managedContext = appDelegate.persistentContainer.viewContext
+
+    }
+    
+    
+    func readDataOnLaunch() {
+        readContactsFromCoreData()
+        
+        if model.contacts.count == 0 {
+            model.loadInitialJSON()
+        }
+    }
+    
     func createNewContact() {
         
         var ids = [Int]()
         
         for contact in contacts {
-            ids.append(contact.id)
+            ids.append(Int(contact.id))
         }
         
         let nextID = ids.max()!
         
-        newContact = Contact.makeNew(withId : nextID)
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Contact",
+                                       in: managedContext)!
         
+        
+        newContact = Contact(entity: entity, insertInto: managedContext)
+        
+        newContact!.id = Int16(nextID)
+        newContact!.firstName = ""
     }
     
     func appendNewContact() {
@@ -46,6 +76,18 @@ class Model {
     
     func dropNewContact() {
         newContact = nil
+    }
+    
+    func delete(_ contact : Contact) {
+        self.contacts.remove(at: contacts.index(of: contact)!)
+        
+        managedContext.delete(contact)
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     func loadInitialJSON() {
@@ -58,8 +100,8 @@ class Model {
                 
                 let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String:Any]]
                 
-                for oneContact in json! {
-                    if let oneContact = Contact(json: oneContact) {
+                for oneContactJSON in json! {
+                    if let oneContact = model.parseFrom(json: oneContactJSON) {
                         contacts.append(oneContact)
                     }
                 }
@@ -69,9 +111,99 @@ class Model {
                 print(error)
             }
         } else {
-            print("Неправильно задан файл с контактами")
+            print("Wrong file")
         }
         
     }
+    
+    func saveContacts() {
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func readContactsFromCoreData() {
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest =
+            NSFetchRequest<Contact>(entityName: "Contact")
+        
+        do {
+            contacts = try managedContext.fetch(fetchRequest)
+            
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    
+    func parseFrom(json: [String: Any]) -> Contact? {
+        
+        
+        guard let ID = json["ID"] as? Int else { return nil }
+        
+        guard let firstName = json["firstName"] as? String  else { return nil }
+        
+        guard let lastName = json["lastName"] as? String  else { return nil }
+        
+        //  guard let phoneNumberString = json["phoneNumber"] as? String else { return nil }
+        
+        guard let zipCode = json["zipCode"] as? String  else { return nil }
+        
+        guard let city = json["city"] as? String  else { return nil }
+        
+        guard let streetAddress1 = json["streetAddress1"] as? String  else { return nil }
+        
+        guard  let streetAddress2 = json["streetAddress2"] as? String  else { return nil }
+        
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return nil
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Contact",
+                                       in: managedContext)!
+        
+        
+        let newContactObject = Contact(entity: entity, insertInto: managedContext)
+        
+        
+        
+        newContactObject.id = Int16(ID)
+        newContactObject.firstName = firstName
+        newContactObject.lastName = lastName
+        newContactObject.zipCode = zipCode
+        newContactObject.city = city
+        newContactObject.streetAddress1 = streetAddress1
+        newContactObject.streetAddress2 = streetAddress2
+        
+        return newContactObject
+        
+    }
+    
     
 }
