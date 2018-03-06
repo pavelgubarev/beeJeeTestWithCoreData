@@ -41,15 +41,15 @@ class Model {
     }
     
     
-    func readDataOnLaunch() {
-        readContactsFromCoreData()
+    public func readDataOnLaunch() {
+        readContactsFromStorage()
         
         if model.contacts.count == 0 {
             model.loadInitialJSON()
         }
     }
     
-    func createNewContact() {
+    public func createNewContact() {
         
         var ids = [Int]()
         
@@ -70,15 +70,15 @@ class Model {
         newContact!.firstName = ""
     }
     
-    func appendNewContact() {
+    public func appendNewContact() {
         contacts.append(newContact!)
     }
     
-    func dropNewContact() {
+    public func dropNewContact() {
         newContact = nil
     }
     
-    func delete(_ contact : Contact) {
+    public func delete(_ contact : Contact) {
         self.contacts.remove(at: contacts.index(of: contact)!)
         
         managedContext.delete(contact)
@@ -90,7 +90,7 @@ class Model {
         }
     }
     
-    func loadInitialJSON() {
+    public func loadInitialJSON() {
         
         if let path = Bundle.main.path(forResource: initialJSONFile, ofType: "json") {
             do {
@@ -116,7 +116,7 @@ class Model {
         
     }
     
-    func saveContacts() {
+    public func saveContacts() {
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -133,7 +133,7 @@ class Model {
         }
     }
     
-    func readContactsFromCoreData() {
+    public func readContactsFromStorage() {
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -157,7 +157,7 @@ class Model {
     
     
     
-    func parseFrom(json: [String: Any]) -> Contact? {
+    private func parseFrom(json: [String: Any]) -> Contact? {
         
         
         guard let ID = json["ID"] as? Int else { return nil }
